@@ -31,11 +31,7 @@ gulp.task('start', function() {
 });
 
 gulp.task("build", function() {
-   return realm.transpiler2.universal("src/", "build/").then(function() {
-      console.log("ALL GOOD")
-   }).catch(function(e) {
-      console.log(e)
-   })
+   return realm.transpiler2.universal("src/", "build/");
 });
 
 gulp.task("dist", function(done) {

@@ -28,9 +28,6 @@
     "run-sequence": "^1.1.5"
   },
   "dependencies": {
-    "gulp-concat": "^2.6.0",
-    "gulp-jsbeautifier": "^2.0.3",
-    "gulp-uglify": "^1.5.3",
     "lodash": "^4.12.0",
     "realm-js": "^1.1.80",
     "realm-router": "^1.1.21",
