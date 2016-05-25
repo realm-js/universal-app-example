@@ -1,0 +1,21 @@
+{
+  "name": "universal-app-example",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ivan.Orlov <ivan@morrr.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/realm-js/universal-app-example",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}
