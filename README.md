@@ -3,7 +3,7 @@
 ## How to launch
 
 ```bash
-git@github.com:realm-js/universal-app-example.git
+git clone git@github.com:realm-js/universal-app-example.git
 cd universal-app-example
 npm install
 gulp start
@@ -12,7 +12,7 @@ gulp start
 
 Enjoy a truly univeral approach!
 
-Visit http://localhost:3055/ and check the console! 
+Visit http://localhost:3055/ and check the console!
 
 Then try!
 ```js
