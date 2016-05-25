@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
    extended: true
 }));
 
-// Request libraries
+// Request libraries!
 app.use('/lib/lodash', express.static(__dirname + '/bower_components/lodash'));
 app.use('/lib/realm-js', express.static(__dirname + '/node_modules/realm-js'));
 app.use('/lib/realm-router', express.static(__dirname + '/node_modules/realm-router/dist/frontend'));
