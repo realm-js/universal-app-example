@@ -19,7 +19,7 @@ require('./build/backend.js');
 require('./build/universal.js')
 
 realm.require('realm.router.Express', function(router) {
-   app.use(router(["realm.router.test", "realm.router.bridge"]))
+   app.use(router(["realm.router.bridge"]))
       // Our current build
 
    app.use('/build', express.static(__dirname + '/build'));
