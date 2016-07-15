@@ -28,9 +28,9 @@
     "run-sequence": "^1.1.5"
   },
   "dependencies": {
-    "lodash": "^4.12.0",
-    "realm-js": "^1.1.80",
-    "realm-router": "^1.1.21",
-    "request": "^2.72.0"
+    "lodash": "4.12.0",
+    "realm-js": "1.1.88",
+    "realm-router": "1.1.27",
+    "request": "2.72.0"
   }
 }

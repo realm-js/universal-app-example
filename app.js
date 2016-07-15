@@ -21,7 +21,11 @@ require('./build/universal.js')
 realm.require('realm.router.Express', function(router) {
    app.use(router(["realm.router.test", "realm.router.bridge"]))
       // Our current build
-   app.use('/', express.static(__dirname + '/build'));
+
+   app.use('/build', express.static(__dirname + '/build'));
+   app.use('/', function(req, res) {
+      res.sendFile(__dirname + "/index.html");
+   });
 })
 
 var port = process.env.PORT || 3055;

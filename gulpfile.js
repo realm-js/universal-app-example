@@ -30,32 +30,18 @@ gulp.task('start', function() {
    });
 });
 
-gulp.task("build", function() {
-   return realm.transpiler2.universal("src/", "build/");
+gulp.task("build", function(done) {
+   realm.transpiler2.universal("src/", "build/").then(function() {
+
+      runSequence('prettify', done)
+   });
 });
 
-gulp.task("dist", function(done) {
-   runSequence('build', 'dist-backend', 'dist-frontend', 'uglify-frontend', done)
-});
-gulp.task('dist-backend', function() {
-   return gulp.src(["build/universal.js", "build/backend.js"])
-      .pipe(concat("example.js"))
+gulp.task('prettify', function() {
+   return gulp.src(["build/**/*.js"])
       .pipe(prettify({
          js: {
             max_preserve_newlines: 1
          }
-      }))
-      .pipe(gulp.dest("./dist/backend/"))
-});
-gulp.task('dist-frontend', function() {
-   return gulp.src(["build/universal.js", "build/frontend.js"])
-      .pipe(concat('example.js'))
-      .pipe(gulp.dest("./build"))
-      .pipe(gulp.dest("./dist/frontend/"))
-});
-gulp.task('uglify-frontend', function() {
-   return gulp.src("dist/frontend/realm.router.js")
-      .pipe(uglify())
-      .pipe(rename('example.min.js'))
-      .pipe(gulp.dest('./dist/frontend/'));
+      })).pipe(gulp.dest("./build/"))
 });
